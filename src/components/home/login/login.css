@@ -1,0 +1,34 @@
+#center-modal{
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+#center-modal-form{
+    display: flex;
+    position:relative;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center-modal-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+
+    & h3{
+        opacity: 50%;
+    }
+}

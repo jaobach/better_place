@@ -7,15 +7,18 @@
 }
 
 body {
-  background-color: #fafafa;
+background: linear-gradient(
+  180deg,
+  #381c84,
+  #5a3fbf
+);
   color: #0d0d0d;
-
+  height: 100vh;
 }
 
 /* ====== TIPOGRAFIA ====== */
 h1, h2, h3, p {
   line-height: 1.3;
-  color: #0d0d0d;
 }
 
 h1 {
@@ -24,12 +27,12 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: .7rem;
   font-weight: 500;
 }
 
@@ -58,13 +61,14 @@ input:focus, textarea:focus {
 /* ====== BOTÃO ====== */
 button {
   padding: 10px 18px;
-  font-size: 1rem;
+  font-size: .7rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  background-color: #0a1a2f; /* Azul escuro */
+  background-color: #312E81; /* Azul escuro */
   color: white;
   transition: 0.2s;
+  width: 100%;
 }
 
 button:hover {
@@ -82,40 +86,22 @@ button:active {
 }
 
 
-
-
-
-
-.header{
-  position: relative;
-  width: 100%;
-  flex: 0 0 2%;
+.title-w{
+  color: white;
+  font-size: 1.5rem;
+}
+.subtitle-w{
+    color: white;
+    font-size: .8rem;
 }
 
-.content{
-  position: relative;
-  width: 100%;
-  height: auto;
-      flex: 0 0 80%;
+.blue-1{
+  color: 312E81;
 }
 
-.footer{
-  position: relative;
-  width: 100%;
-  flex: 0 0 9%;
-  background-color: #676da0;
-}
-
-
-.modal{
-  border-radius: 2rem;
-  background-color: #2a316f;
-  height: auto;
-}
-
-
-
-
-.bg-color{
- background-color: #1d203b;
+.field label {
+  min-width: 60px; /* alinha todas as labels */
+  text-align: right; /* opcional */
+  font-size: .7rem;
+  opacity: 80%;
 }
