@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const searches = [
-    { title: "2o ano B", time: "2 hours ago", tag: "Claurio Abramo" },
-    { title: "3o ano C", time: "Yesterday", tag: "Umuarama" },
-    { title: "5a ano 4", time: "2 days ago", tag: "Claurio Abramo" }
+    { title: "2o ano B", time: "2 hours ago", tag: "CEICA" },
+    { title: "3o ano C", time: "Yesterday", tag: "EMU" },
+    { title: "5a ano 4", time: "2 days ago", tag: "JPA" }
   ];
 
   const navigate = useNavigate();
@@ -68,7 +68,6 @@ export default function Home() {
                   <div>
                     <p className="search-title">{item.title}</p>
                     <div className="search-meta">
-                      <span>{item.time}</span>
                       <span className="tag">{item.tag}</span>
                     </div>
                   </div>

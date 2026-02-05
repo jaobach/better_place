@@ -5,6 +5,7 @@ import { PrivateRoute } from './privateRoute.tsx';
 import ClassRoom from '../components/class/classroom.js';
 import NewClassRoom from '../components/class/newClassroom/newClassRoom.js';
 import NewStudent from '../components/newStudent/newStudent.js';
+import Statistics from '../components/statistics/statistics.js';
 
 
 export default function AppRoutes() {
@@ -34,6 +35,10 @@ export default function AppRoutes() {
 
         <Route element={<PrivateRoute />}>
           <Route path="/newStudent" element={<NewStudent />} />
+        </Route>
+
+        <Route element={<PrivateRoute />}>
+          <Route path="/statistics" element={<Statistics />} />
         </Route>
 
 
