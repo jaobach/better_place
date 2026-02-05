@@ -1,6 +1,6 @@
 
-import '../../../utils/utils.css'
-import '../../../utils/global.css'
+import '../../utils/utils.css'
+import '../../utils/global.css'
 import './login.css';
 
 

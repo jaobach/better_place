@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS students (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  classroom_id INTEGER NOT NULL,
+  score INTEGER NOT NULL,
+  age INTEGER NOT NULL
+);

@@ -1,42 +1,84 @@
+import React from "react";
+import { Search, ArrowRight, Plus, Cog, Sliders } from "lucide-react";
+import "./home.css";
+import "../../utils/global.css"
+import { useNavigate } from "react-router-dom";
 
-import '../../utils/global.css';
-import '../../utils/utils.css';
-import './home.css';
+export default function Home() {
+  const searches = [
+    { title: "2o ano B", time: "2 hours ago", tag: "Claurio Abramo" },
+    { title: "3o ano C", time: "Yesterday", tag: "Umuarama" },
+    { title: "5a ano 4", time: "2 days ago", tag: "Claurio Abramo" }
+  ];
 
+  const navigate = useNavigate();
 
-function Home() {
   return (
-    <div className="home fx fx-col">
-        <div className='header fx fx-row'>
-            <div className='logo'>logo</div>
-            <div className='header-actions fx fx-row'>
-                <h3>Sobre</h3>
-                <h3>Contato</h3>
-                <h3>Sair</h3>
-            </div>
+    <div className="home">
+      <header className="home-header">
+        <div className="logo">
+          <div className="logo-icon">B</div>
+          <span>Better place</span>
         </div>
 
-        <div className='content fx fx-row'>
-            <div id='mascot-side'></div>
-            <div id='start-side'>
-                <div className='modal bx-sh fx fx-col' id='start-modal'>
-                    <div id='start-text'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum d tempor incididunt ut labore<br></br> et dolore magna aliqua. Ut enim ad<br></br> minim veniam, quis nostrud <br></br> exercitation ullamco laboris nisi<br></br> ut aliquip ex ea commodo consequat.<br></br></p>
-                        
+        <div className="header-actions">
+          <div className="welcome">
+            <span>Bem vinda Maristela!</span>
+            <div className="status-dot" />
+          </div>
+        </div>
+      </header>
+
+      <main className="home-main">
+        <aside className="cta">
+          <div className="cta-card">
+            <p>O que faremos?</p>
+            <button className="btn-primary" onClick={() => navigate("/newClassRoom")}>
+              <Plus size={18} />
+              Cadastrar nova turma
+            </button>
+            <button className="btn-primary">
+              <Sliders size={18} />
+              Ver estatísticas
+            </button>
+            <button className="btn-primary">
+              <Cog size={18} />
+              Configurações
+            </button>
+          </div>
+
+        </aside>
+
+        <section className="searches">
+          <div className="searches-header">
+            <div>
+              <h1>Turmas</h1>
+              <p> Trabalhos em andamento</p>
+            </div>
+            <span className="counter">{searches.length} items</span>
+          </div>
+
+          <div className="searches-list">
+            {searches.map((item, index) => (
+              <div key={index} className="search-item">
+                <div className="search-left">
+                  <div className="search-icon">
+                    <Search size={18} />
+                  </div>
+                  <div>
+                    <p className="search-title">{item.title}</p>
+                    <div className="search-meta">
+                      <span>{item.time}</span>
+                      <span className="tag">{item.tag}</span>
                     </div>
-                    <div id='start-actions'>
-                        <button>começar</button>
-                        <button>sobre</button>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            </div>
-
-        <div className='footer'>
-            home footer
-        </div>
+                <ArrowRight className="arrow" />
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
-
-export default Home;
